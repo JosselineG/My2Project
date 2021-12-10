@@ -25,7 +25,7 @@
 
 }
 .navBar li:hover{
-  background-color: #ddd;
+  background-color: rgb(16, 76, 102);
   color: black;
 }
 
@@ -43,7 +43,7 @@
 
 .search-bar{
   height: 30px;
-  width: 200px;
+  width: 400px;
   margin: 5px;
   transition: 0.4s ease;
  
@@ -54,14 +54,33 @@
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
-  height: 554px;
+  height: 555px;
   position: relative;
   text-align: center;
+  
   
 }
 
 .home{
   text-align: center;
+ 
 }
 
 
+.WeatherBox{
+  width: 900px;
+  border: 1px solid black;
+  padding: 160px;
+  margin: auto;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 16px;
+
+}
+
+.heading{
+ 
+  text-align: center;
+  padding:1px;
+  margin: auto;
+ 
+}
