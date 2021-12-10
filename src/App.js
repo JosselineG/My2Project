@@ -18,14 +18,6 @@ function App() {
                    
           </ul>
 
-          <div className='searchBox'>
-          <input type='text'
-          className="search-bar"
-          placeholder='Enter a city...'/>
-
-          <button className= "bt" type = 'submit'>Submit</button>
-
-        </div>
 
       </nav>
 

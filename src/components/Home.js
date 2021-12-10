@@ -36,6 +36,14 @@ class Home extends Component{
                 <div className="home">
                     <h1>Home Weather</h1>
 
+                    <div className='searchBox'>
+          <input type='text'
+          className="search-bar"
+          placeholder='Enter a city...'/>
+
+          <button className= "bt" type = 'submit'>Submit</button>
+
+        </div>
 
 
     
