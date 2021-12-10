@@ -6,7 +6,7 @@ class Home extends Component{
  
     constructor(){
         super()
-        this.state = {value:" "}
+        this.state = {city:" ", country:" "}
 
     }
 
@@ -18,9 +18,7 @@ class Home extends Component{
     
     handleSubmit =(e)=>{
      
-    fetch('api.openweathermap.org/data/2.5/weather?q='+ this.state.value + '&appid={85d5a26c992084f5c10991cdc6389f48}')
-    .then(response => response.json())
-    .then((data) => console.log(data))
+   
     
 }
  
@@ -36,8 +34,13 @@ class Home extends Component{
                     <input type='text'
                         className="search-bar"
                         placeholder='Enter a city...'
-                        value= { this.state.value}
-                        onChange={(e)=>this.handleChange(e)}
+                    
+                    />
+
+                   <input type='text'
+                        className="search-bar"
+                        placeholder='Enter country...'
+                       
                     />
 
                     <button 

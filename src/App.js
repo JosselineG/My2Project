@@ -22,11 +22,6 @@ function App() {
       </nav>
 
       <div className='body'>
-
-
-   
-    
-
       <Routes>
       
        <Route path="/" element={<Home/>}/>
