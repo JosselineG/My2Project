@@ -10,10 +10,10 @@ function App() {
       <nav className='navBar'>
       <ul>
             <li> 
-           <Link style={{color:"white", textDecoration: 'none'}}  to = '/'> Home</Link>  
+           <Link style={{color:"white", textDecoration: 'none', fontSize:'20px'}}  to = '/'> Home</Link>  
             </li>
              <li> 
-             <Link style={{color:"white", textDecoration: 'none'}} to = 'Favorite'>Favorites</Link> 
+             <Link style={{color:"white", textDecoration: 'none',  fontSize:'20px'}} to = 'Favorites'>Favorites</Link> 
             </li>
                    
           </ul>
