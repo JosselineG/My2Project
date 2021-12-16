@@ -6,8 +6,12 @@ import Favorites from './components/Favorites'
 function App() {
   return (
     <div className="app">
-
+     
       <nav className='navBar'>
+      <div className='heading'>
+                    <h1>Weather</h1>
+
+                    </div>
       <ul>
             <li> 
            <Link style={{color:"white", textDecoration: 'none', fontSize:'20px'}}  to = '/'> Home</Link>  

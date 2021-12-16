@@ -6,7 +6,7 @@ class Home extends Component{
  
     constructor(){
         super()
-        this.state = {CityState:" "}
+        this.state = {City:" ", Location: " ", temperature: " "}
 
     }
 
@@ -23,35 +23,28 @@ class Home extends Component{
     
         e.preventDefault();
         console.log("in handlesubmit")
-        fetch('http://api.openweathermap.org/data/2.5/weather?q='+ this.state.CityState + '&appid=' + process.env.REACT_APP_OPEN_WEATHER_API_KEY)
+        fetch('http://api.openweathermap.org/data/2.5/weather?q='+ this.state.City  + '&appid=' + process.env.REACT_APP_OPEN_WEATHER_API_KEY)
         .then(response => response.json())
-        .then((data) => console.log(data))
+        .then((City) => {
+        this.setState({Location: City.name, temperature: City.main.temp })
+        console.log(City)
+        })
 
-    
-    
+      
+      
 }
  
-   
-  
-
-
         render(){
             return(
                 <div className="home">
-                    <div className='heading'>
-                    <h1>Weather</h1>
-
-                    </div>
                     
-
-
                  
                     <div className='searchBox'>
                     
                     <input type='text'
                         className="search-bar"
-                        name="CityState"
-                        placeholder='City and State... Atlanta,Georgia'
+                        name="City"
+                        placeholder='Search City...  '
                         onChange = {(e)=>this.handleChange(e)}
                     
                     />
@@ -60,15 +53,25 @@ class Home extends Component{
 
                     <button 
                         className= "bt" 
-                        type = 'submit'
                         onClick={(e)=>this.handleSubmit(e)} 
                         >Submit</button>
 
                       </div>
 
+                        <div className='LocationBox'>
+                            <div className='location'>{this.state.Location}
+                            </div>
+                        </div>
 
                         <div className='WeatherBox'>
-
+                        
+                            <div className='temperature'>
+                            
+                                    {Math.round(((this.state.temperature-273.15)*1.8)+32)}
+                            
+                                
+                                
+                            </div>
 
                         </div>
 
