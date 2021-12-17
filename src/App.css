@@ -72,16 +72,24 @@
 
 
 .WeatherBox .temperature{
-  width: 400px;
+  width: 300px;
   border: 1px solid black;
-  padding: 100px;
+  padding: 50px;
   margin: auto;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.7);
   border-radius: 16px;
 
-  font-size: 90px;
+  font-size: 100px;
   font-weight: 600;
-  color: white;
+  color: black;
+
+}
+
+
+.WeatherBox .description{
+  color: black;
+  font-size: 40px;
+  font-weight: 500;
 
 }
 
@@ -94,12 +102,10 @@
  
 }
 .LocationBox .location{
-  font-size: 32px;
+  font-size: 50px;
   text-align: center;
-  color: white;
-  font-weight: 500;
-  
- 
+  color: black;
+  font-weight: 600;
 
   
 }

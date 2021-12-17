@@ -4,9 +4,9 @@ import React, {Component} from 'react';
 
 class Home extends Component{
  
-    constructor(){
-        super()
-        this.state = {City:" ", Location: " ", temperature: " "}
+    constructor(props){
+        super(props)
+        this.state = {City:" ", Location: " ", temperature: " ", descr: " "}
 
     }
 
@@ -26,10 +26,12 @@ class Home extends Component{
         fetch('http://api.openweathermap.org/data/2.5/weather?q='+ this.state.City  + '&appid=' + process.env.REACT_APP_OPEN_WEATHER_API_KEY)
         .then(response => response.json())
         .then((City) => {
-        this.setState({Location: City.name, temperature: City.main.temp })
-        console.log(City)
-        })
-
+        this.setState({Location: City.name, temperature: ((City.main.temp-273.15)*1.8+32), descr: City.weather[0].description})
+        
+     })
+     .catch((error)=> {
+        alert("Incorrect city, try again!");
+    })
       
       
 }
@@ -66,18 +68,17 @@ class Home extends Component{
                         <div className='WeatherBox'>
                         
                             <div className='temperature'>
-                            
-                                    {Math.round(((this.state.temperature-273.15)*1.8)+32)}
-                            
-                                
+                                        
+                                    {Math.round(this.state.temperature)+"ºF"}
+                                    <div className= 'description'>
+
+                                         {this.state.descr}
+
+                                    </div>
                                 
                             </div>
-
+                            
                         </div>
-
-
-
-    
                 </div>
             )
 

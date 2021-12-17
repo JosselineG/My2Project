@@ -2,6 +2,7 @@ import './App.css';
 import {Routes, Route, Link} from 'react-router-dom'
 import Home from './components/Home';
 import Favorites from './components/Favorites'
+import ThermostatIcon from '@mui/icons-material/Thermostat';
 
 function App() {
   return (
@@ -9,8 +10,8 @@ function App() {
      
       <nav className='navBar'>
       <div className='heading'>
-                    <h1>Weather</h1>
-
+                    <h1>Weather {<ThermostatIcon/>} </h1>
+                   
                     </div>
       <ul>
             <li> 
