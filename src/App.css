@@ -44,7 +44,7 @@
 .search-bar{
   height: 30px;
   width: 400px;
-  margin: 5px;
+  margin: 20px;
   transition: 0.4s ease;
  
 }
@@ -97,7 +97,8 @@
   color:white;
   padding: 1px;
   padding-right: 40px;
-  float: right
+  float: right;
+  
 
  
 }
@@ -109,3 +110,10 @@
 
   
 }
+
+.WeatherBox .windspeed{
+  color: black;
+  font-size: 30px;
+ 
+}
+

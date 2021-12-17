@@ -9,15 +9,16 @@ function App() {
     <div className="app">
      
       <nav className='navBar'>
-      <div className='heading'>
-                    <h1>Weather {<ThermostatIcon/>} </h1>
-                   
-                    </div>
-      <ul>
+        <div className='heading'>
+          
+          <h1>Weather<ThermostatIcon fontSize='large'/> </h1>          
+                  
+        </div>
+          <ul>
             <li> 
-           <Link style={{color:"white", textDecoration: 'none', fontSize:'20px'}}  to = '/'> Home</Link>  
+             <Link style={{color:"white", textDecoration: 'none', fontSize:'20px'}}  to = '/'> Home</Link>  
             </li>
-             <li> 
+            <li> 
              <Link style={{color:"white", textDecoration: 'none',  fontSize:'20px'}} to = 'Favorites'>Favorites</Link> 
             </li>
                    
