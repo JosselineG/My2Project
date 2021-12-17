@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 
-
-
 class Home extends Component{
  
     constructor(props){
@@ -72,7 +70,7 @@ class Home extends Component{
                                     {this.state.temperature}
                                     <div className= 'description'>
 
-                                         {this.state.descr}{this.state.icon}
+                                         {this.state.descr}
 
                                     </div>
 
@@ -85,6 +83,7 @@ class Home extends Component{
                             </div>
 
                         </div>
+
                 </div>
             )
 

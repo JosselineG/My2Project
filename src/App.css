@@ -72,7 +72,7 @@
 
 
 .WeatherBox .temperature{
-  width: 300px;
+  width: 400px;
   border: 1px solid black;
   padding: 50px;
   margin: auto;
@@ -117,3 +117,14 @@
  
 }
 
+.container .cont{
+padding: 3px;
+text-align: left;
+
+}
+
+.container .contHeader{
+  padding: 1px;
+  text-align: center;
+  
+}
