@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/My2Project/static/css/main.b74bee35.chunk.css",
+    "main.js": "/My2Project/static/js/main.d17c66fa.chunk.js",
+    "main.js.map": "/My2Project/static/js/main.d17c66fa.chunk.js.map",
+    "runtime-main.js": "/My2Project/static/js/runtime-main.efaaf7e0.js",
+    "runtime-main.js.map": "/My2Project/static/js/runtime-main.efaaf7e0.js.map",
+    "static/js/2.9ee4dbe6.chunk.js": "/My2Project/static/js/2.9ee4dbe6.chunk.js",
+    "static/js/2.9ee4dbe6.chunk.js.map": "/My2Project/static/js/2.9ee4dbe6.chunk.js.map",
+    "static/js/3.5bcfcb06.chunk.js": "/My2Project/static/js/3.5bcfcb06.chunk.js",
+    "static/js/3.5bcfcb06.chunk.js.map": "/My2Project/static/js/3.5bcfcb06.chunk.js.map",
+    "index.html": "/My2Project/index.html",
+    "static/css/main.b74bee35.chunk.css.map": "/My2Project/static/css/main.b74bee35.chunk.css.map",
+    "static/js/2.9ee4dbe6.chunk.js.LICENSE.txt": "/My2Project/static/js/2.9ee4dbe6.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/My2Project/static/media/backgrWeather.360b3532.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.efaaf7e0.js",
+    "static/js/2.9ee4dbe6.chunk.js",
+    "static/css/main.b74bee35.chunk.css",
+    "static/js/main.d17c66fa.chunk.js"
+  ]
+}
