@@ -17,8 +17,9 @@ class Form extends Component {
        // prevent page reloads form event
        e.preventDefault(); 
 
-        this.setState({[e.target.name] : e.target.value})
-         // update the state everytime the form changes
+       // update the state everytime the form changes
+       this.setState({[e.target.name] : e.target.value})
+         
         
       
     }
@@ -39,7 +40,7 @@ class Form extends Component {
        // calls the callback function from Favorites and sends data from state
      })
      .catch((error)=> {
-        alert("Incorrect city, try again!");
+        alert("Incorrect City, Try Again!");
     })
         
 
@@ -49,19 +50,24 @@ class Form extends Component {
 
         return(
             <form>
-               
                 <input
                  className='favInput'
                   type = "text" 
                   name= "City"
                   placeholder='Favorite City...  '
                   value = {this.state.City}
-                  
                   onChange = {(e)=>this.handleChange(e)}
                 />
                  
                 
-                 <Button style={{backgroundColor: 'black'}}endIcon={<PublishIcon/>} size = "small" type="submit" variant='contained' onClick= {((e)=>this.onFormSubmit(e))}>Submit</Button>
+                <Button 
+                 style={{backgroundColor: 'black'}}
+                 endIcon={<PublishIcon/>} 
+                 size = "small" 
+                 type="submit" 
+                 variant='contained' 
+                 onClick= {((e)=>this.onFormSubmit(e))}>Submit
+                </Button>
                 
            
             </form>

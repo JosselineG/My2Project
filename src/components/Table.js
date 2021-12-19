@@ -3,12 +3,9 @@ import Button from '@mui/material/Button'
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const TableHeader = () => { 
-    
-    
        
     return (
-        
-      
+           
         <thead>
             <tr>
                 <th>City</th>
@@ -33,7 +30,12 @@ const TableHeader = () => {
                 <td> {row.temperature}</td>
                 <td>{row.descr}</td>
                 <td> {row.wind}</td>
-                <Button variant='contained' style={{backgroundColor: 'rgb(16, 76, 102'}} onClick={() => props.removeLink(index)}><DeleteIcon fontSize='medium'/></Button>
+                <Button 
+                    variant='contained' 
+                    style={{backgroundColor: 'rgb(16, 76, 102'}} 
+                    onClick={() => props.removeLink(index)}>
+                    <DeleteIcon fontSize='medium'/>
+                </Button>
                
             </tr>
         )

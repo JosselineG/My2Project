@@ -17,8 +17,6 @@ class Favorites extends React.Component {
     
     }
   
- 
-  
     handleSubmit = (favorite) => {
   
       let oldData = this.state.favorites
@@ -32,25 +30,25 @@ class Favorites extends React.Component {
       return (
         <div className="container">
             <div className='contHeader'>
-            <h1>Add to Favorites</h1>
-          </div>
+              <h1>Add to Favorites</h1>
+            </div>
           <div className='cont'>
            
-          <Table favData = {this.state.favorites} removeLink = {this.handleRemove} />
+          <Table 
+            favData = {this.state.favorites} 
+            removeLink = {this.handleRemove} 
+          />
             
           <br />        
 
-          <Form onNewSubmit = {this.handleSubmit}/>
+          <Form 
+            onNewSubmit = {this.handleSubmit}
+          />
+
           </div>
         </div>
       )
     }
   }
-
-
-
-
-
-
 
 export default Favorites;
