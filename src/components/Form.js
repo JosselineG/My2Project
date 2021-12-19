@@ -20,7 +20,6 @@ class Form extends Component {
        // update the state everytime the form changes
        this.setState({[e.target.name] : e.target.value})
          
-        
       
     }
 

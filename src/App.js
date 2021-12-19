@@ -8,7 +8,6 @@ import ThermostatIcon from '@mui/icons-material/Thermostat';
 function App() {
   return (
     <div className="app">
-     
       <nav className='navBar'>
         <div className='heading'>
           
