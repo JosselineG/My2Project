@@ -32,7 +32,7 @@ function App() {
       <div className='body'>
       <Routes>
       
-       <Route path="/My2Project" element={<Home/>}/>
+       <Route path="/My2Project/" element={<Home/>}/>
        <Route path="Favorites" element={<Favorites/>}/>
     
      </Routes>
