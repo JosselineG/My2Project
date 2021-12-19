@@ -17,7 +17,7 @@ function App() {
         </div>
           <ul>
             <li> 
-             <Link style={{color:"white", textDecoration: 'none', fontSize:'20px'}}  to = 'Home'>  Home  </Link>  
+             <Link style={{color:"white", textDecoration: 'none', fontSize:'20px'}}  to = '/'>  Home  </Link>  
             </li>
             <li> 
              <Link style={{color:"white", textDecoration: 'none',  fontSize:'20px'}} to = 'Favorites'>Favorites  </Link> 
@@ -32,7 +32,7 @@ function App() {
       <div className='body'>
       <Routes>
       
-       <Route path="Home" element={<Home/>}/>
+       <Route path="/" element={<Home/>}/>
        <Route path="Favorites" element={<Favorites/>}/>
     
      </Routes>
