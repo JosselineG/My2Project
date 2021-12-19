@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Home/static/css/main.940ef87f.chunk.css",
-    "main.js": "/Home/static/js/main.fe2e1c73.chunk.js",
-    "main.js.map": "/Home/static/js/main.fe2e1c73.chunk.js.map",
-    "runtime-main.js": "/Home/static/js/runtime-main.926444a2.js",
-    "runtime-main.js.map": "/Home/static/js/runtime-main.926444a2.js.map",
-    "static/js/2.9ee4dbe6.chunk.js": "/Home/static/js/2.9ee4dbe6.chunk.js",
-    "static/js/2.9ee4dbe6.chunk.js.map": "/Home/static/js/2.9ee4dbe6.chunk.js.map",
-    "static/js/3.5bcfcb06.chunk.js": "/Home/static/js/3.5bcfcb06.chunk.js",
-    "static/js/3.5bcfcb06.chunk.js.map": "/Home/static/js/3.5bcfcb06.chunk.js.map",
-    "index.html": "/Home/index.html",
-    "static/css/main.940ef87f.chunk.css.map": "/Home/static/css/main.940ef87f.chunk.css.map",
-    "static/js/2.9ee4dbe6.chunk.js.LICENSE.txt": "/Home/static/js/2.9ee4dbe6.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/Home/static/media/backgrWeather.360b3532.png"
+    "main.css": "/My2Project/Home/static/css/main.93751b36.chunk.css",
+    "main.js": "/My2Project/Home/static/js/main.fe2e1c73.chunk.js",
+    "main.js.map": "/My2Project/Home/static/js/main.fe2e1c73.chunk.js.map",
+    "runtime-main.js": "/My2Project/Home/static/js/runtime-main.1f3a0e9e.js",
+    "runtime-main.js.map": "/My2Project/Home/static/js/runtime-main.1f3a0e9e.js.map",
+    "static/js/2.9ee4dbe6.chunk.js": "/My2Project/Home/static/js/2.9ee4dbe6.chunk.js",
+    "static/js/2.9ee4dbe6.chunk.js.map": "/My2Project/Home/static/js/2.9ee4dbe6.chunk.js.map",
+    "static/js/3.5bcfcb06.chunk.js": "/My2Project/Home/static/js/3.5bcfcb06.chunk.js",
+    "static/js/3.5bcfcb06.chunk.js.map": "/My2Project/Home/static/js/3.5bcfcb06.chunk.js.map",
+    "index.html": "/My2Project/Home/index.html",
+    "static/css/main.93751b36.chunk.css.map": "/My2Project/Home/static/css/main.93751b36.chunk.css.map",
+    "static/js/2.9ee4dbe6.chunk.js.LICENSE.txt": "/My2Project/Home/static/js/2.9ee4dbe6.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/My2Project/Home/static/media/backgrWeather.360b3532.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.926444a2.js",
+    "static/js/runtime-main.1f3a0e9e.js",
     "static/js/2.9ee4dbe6.chunk.js",
-    "static/css/main.940ef87f.chunk.css",
+    "static/css/main.93751b36.chunk.css",
     "static/js/main.fe2e1c73.chunk.js"
   ]
 }
