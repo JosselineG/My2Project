@@ -32,10 +32,10 @@ class Favorites extends React.Component {
       return (
         <div className="container">
             <div className='contHeader'>
-          <h1>Favorites</h1>
+            <h1>Add to Favorites</h1>
           </div>
           <div className='cont'>
-            <p>Save Temperature of Favorite City</p>
+           
           
           <Table favData = {this.state.favorites} removeLink = {this.handleRemove} />
             

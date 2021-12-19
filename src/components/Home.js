@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Button from '@mui/material/Button'
 
 class Home extends Component{
  
@@ -51,10 +52,11 @@ class Home extends Component{
 
                   
 
-                    <button 
-                        className= "bt" 
+                    <Button 
+                        className= "bt"
+                        style={{backgroundColor: 'black'}} size = "small" variant='contained' 
                         onClick={(e)=>this.handleSubmit(e)} 
-                        >Submit</button>
+                        >Submit</Button>
 
                       </div>
 
