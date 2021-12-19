@@ -12,3 +12,4 @@ I have built a weather app that will display the temperature in fahrenheit, a sm
 <img src="FavProj1.png">
 <img src="FavProj2.png">
 
+![alt text](HomeProj.png)
