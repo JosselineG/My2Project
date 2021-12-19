@@ -10,6 +10,7 @@ const TableHeader = () => {
         <thead>
             <tr>
                 <th>City |</th>
+                <th>Temperature |</th>
                 <th>Description |</th>
                 <th>Wind</th>
             </tr>
@@ -27,8 +28,9 @@ const TableHeader = () => {
 
                          
                 <td>{row.City}</td>
-                <td>{row.descript}</td>
-                <td> {row.wnd}</td>
+                <td> {row.temperature}</td>
+                <td>{row.descr}</td>
+                <td> {row.wind}</td>
                 <td><button onClick={() => props.removeLink(index)}>Delete</button></td>
                
             </tr>
@@ -48,7 +50,7 @@ const Table = (props) => {
         <table>
 
           <TableHeader />
-          <TableBody favData = {favData} removeLink = {removeLink}/>
+          <TableBody  favData = {favData} removeLink = {removeLink}/>
        
         </table>     
     )

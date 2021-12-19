@@ -35,14 +35,11 @@ class Favorites extends React.Component {
           <h1>Favorites</h1>
           </div>
           <div className='cont'>
-          <p> Save Temperature of Favorite Cities: </p>
-          
+            <p>Save Temperature of Favorite City</p>
           
           <Table favData = {this.state.favorites} removeLink = {this.handleRemove} />
             
-          <br />
-
-        
+          <br />        
 
           <Form onNewSubmit = {this.handleSubmit}/>
           </div>

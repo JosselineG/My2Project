@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Favorites from './components/Favorites'
 import ThermostatIcon from '@mui/icons-material/Thermostat';
 
+
 function App() {
   return (
     <div className="app">
@@ -16,10 +17,11 @@ function App() {
         </div>
           <ul>
             <li> 
-             <Link style={{color:"white", textDecoration: 'none', fontSize:'20px'}}  to = '/'> Home</Link>  
+             <Link style={{color:"white", textDecoration: 'none', fontSize:'20px'}}  to = '/'>  Home  </Link>  
             </li>
             <li> 
-             <Link style={{color:"white", textDecoration: 'none',  fontSize:'20px'}} to = 'Favorites'>Favorites</Link> 
+             <Link style={{color:"white", textDecoration: 'none',  fontSize:'20px'}} to = 'Favorites'>Favorites  </Link> 
+            
             </li>
                    
           </ul>

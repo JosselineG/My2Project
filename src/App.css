@@ -6,7 +6,7 @@
 .navBar{
   overflow: hidden;
   position: fixed;
-  top:0;
+  top: 0;
   width: 100%;
   background-color: black;
 
@@ -128,3 +128,4 @@ text-align: left;
   text-align: center;
   
 }
+
