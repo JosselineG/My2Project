@@ -5,7 +5,7 @@ class Home extends Component{
  
     constructor(props){
         super(props)
-        this.state = {City:" ", Location: " ", temperature: " ", descr: " ", wind: " "}
+        this.state = {City:" ", Location: " ", temperature: " ", descr: " ", wind: " ", Icon: " "}
 
     }
 
@@ -25,7 +25,7 @@ class Home extends Component{
         fetch('http://api.openweathermap.org/data/2.5/weather?q='+ this.state.City  + '&appid=' + process.env.REACT_APP_OPEN_WEATHER_API_KEY)
         .then(response => response.json())
         .then((City) => {
-        this.setState({Location: City.name, temperature: Math.round((City.main.temp-273.15)*1.8+32)+"ºF", descr: City.weather[0].description, wind: "wind: "+ Math.round((City.wind.speed) * 2.236936) + " mph"})
+        this.setState({Location: City.name, temperature: Math.round((City.main.temp-273.15)*1.8+32)+"ºF", descr: City.weather[0].description, Icon: <img src={`http://openweathermap.org/img/w/${City.weather[0].icon}.png`} />, wind: "wind: "+ Math.round((City.wind.speed) * 2.236936) + " mph"})
         
      })
      .catch((error)=> {
@@ -72,7 +72,7 @@ class Home extends Component{
                                     {this.state.temperature}
                                     <div className= 'description'>
 
-                                         {this.state.descr}
+                                         {this.state.descr}{this.state.Icon}
 
                                     </div>
 

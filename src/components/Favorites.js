@@ -36,7 +36,6 @@ class Favorites extends React.Component {
           </div>
           <div className='cont'>
            
-          
           <Table favData = {this.state.favorites} removeLink = {this.handleRemove} />
             
           <br />        

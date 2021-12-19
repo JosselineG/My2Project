@@ -42,10 +42,6 @@ class Form extends Component {
         alert("Incorrect city, try again!");
     })
         
-       
-       // calls the callback function from Favorites and sends data from state
-   
-    
 
     }
 
