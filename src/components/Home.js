@@ -23,7 +23,7 @@ class Home extends Component{
      
         e.preventDefault();
         console.log("in handlesubmit")
-        fetch('https://api.openweathermap.org/data/2.5/weather?q='+ this.state.City  + '&appid=' + process.env.REACT_APP_OPEN_WEATHER_API_KEY)
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=' + this.state.City + '&appid=' + process.env.REACT_APP_OPEN_WEATHER_API_KEY)
         .then(response => response.json())
         .then((City) => {
         this.setState({Location: City.name, temperature: Math.round((City.main.temp-273.15)*1.8+32)+"ºF", descr: City.weather[0].description, Icon: <img alt="" src={`https://openweathermap.org/img/w/${City.weather[0].icon}.png`} />, wind: "wind: "+ Math.round((City.wind.speed) * 2.236936) + " mph"})
