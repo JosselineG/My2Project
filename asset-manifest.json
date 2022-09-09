@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/My2Project/static/css/main.b74bee35.chunk.css",
-    "main.js": "/My2Project/static/js/main.3ee913e3.chunk.js",
-    "main.js.map": "/My2Project/static/js/main.3ee913e3.chunk.js.map",
+    "main.js": "/My2Project/static/js/main.71fb8a81.chunk.js",
+    "main.js.map": "/My2Project/static/js/main.71fb8a81.chunk.js.map",
     "runtime-main.js": "/My2Project/static/js/runtime-main.abfed16b.js",
     "runtime-main.js.map": "/My2Project/static/js/runtime-main.abfed16b.js.map",
-    "static/js/2.a1348c95.chunk.js": "/My2Project/static/js/2.a1348c95.chunk.js",
-    "static/js/2.a1348c95.chunk.js.map": "/My2Project/static/js/2.a1348c95.chunk.js.map",
+    "static/js/2.ae24b4be.chunk.js": "/My2Project/static/js/2.ae24b4be.chunk.js",
+    "static/js/2.ae24b4be.chunk.js.map": "/My2Project/static/js/2.ae24b4be.chunk.js.map",
     "static/js/3.fedb61d8.chunk.js": "/My2Project/static/js/3.fedb61d8.chunk.js",
     "static/js/3.fedb61d8.chunk.js.map": "/My2Project/static/js/3.fedb61d8.chunk.js.map",
     "index.html": "/My2Project/index.html",
     "static/css/main.b74bee35.chunk.css.map": "/My2Project/static/css/main.b74bee35.chunk.css.map",
-    "static/js/2.a1348c95.chunk.js.LICENSE.txt": "/My2Project/static/js/2.a1348c95.chunk.js.LICENSE.txt",
+    "static/js/2.ae24b4be.chunk.js.LICENSE.txt": "/My2Project/static/js/2.ae24b4be.chunk.js.LICENSE.txt",
     "static/media/App.css": "/My2Project/static/media/backgrWeather.360b3532.png"
   },
   "entrypoints": [
     "static/js/runtime-main.abfed16b.js",
-    "static/js/2.a1348c95.chunk.js",
+    "static/js/2.ae24b4be.chunk.js",
     "static/css/main.b74bee35.chunk.css",
-    "static/js/main.3ee913e3.chunk.js"
+    "static/js/main.71fb8a81.chunk.js"
   ]
 }
