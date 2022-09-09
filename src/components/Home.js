@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import Button from '@mui/material/Button'
+import * as dotenv from 'dotenv'
+
+dotenv.config()
 
 class Home extends Component{
  
