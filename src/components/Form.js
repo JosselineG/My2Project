@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import Button from '@mui/material/Button'
 import PublishIcon from '@mui/icons-material/Publish';
+import * as dotenv from 'dotenv'
 
+dotenv.config()
 
 class Form extends Component {
     constructor(props) {
