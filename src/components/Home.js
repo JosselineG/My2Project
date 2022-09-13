@@ -1,41 +1,62 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Button from '@mui/material/Button'
-import * as dotenv from 'dotenv'
-
-dotenv.config()
-
-class Home extends Component{
+import axios from "axios"; 
+import { useState } from "react";
+function Home(){
  
-    constructor(props){
-        super(props)
-        this.state = {City:" ", Location: " ", temperature: " ", descr: " ", wind: " ", Icon: " "}
-
-    }
-
-    handleChange=(e)=>{
-
-        e.preventDefault();
-        this.setState({[e.target.name]: e.target.value})
-    
-    }
-    
-    handleSubmit =(e)=>{
-     
-        e.preventDefault();
-        console.log("in handlesubmit")
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=' + this.state.City + '&appid=' + process.env.REACT_APP_OPEN_WEATHER_API_KEY)
-        .then(response => response.json())
-        .then((City) => {
-        this.setState({Location: City.name, temperature: Math.round((City.main.temp-273.15)*1.8+32)+"ºF", descr: City.weather[0].description, Icon: <img alt="" src={`https://openweathermap.org/img/w/${City.weather[0].icon}.png`} />, wind: "wind: "+ Math.round((City.wind.speed) * 2.236936) + " mph"})
+   
         
-     })
-     .catch((error)=> {
-        alert("Incorrect City, Try Again!");
-    })
+        const [info, setInfo] = useState ({
+        City:"", 
+        Location: "", 
+        temperature: "", 
+        descr: "", 
+        wind: "", 
+        Icon: ""});
+
+   
+
+    const handleChange=(e)=>{
+
+        e.preventDefault();
+        setInfo({...info,[e.target.name]: e.target.value})
+    
+    }
+    
+
+
+    
+    const handleSubmit = async (e)=>{
+
+        e.preventDefault();
+  
+        
       
-      
+      await axios.post('http://localhost:5000/',info) //posting new data from client to apiserver
+    
+   
+        .then(function(response){
+                console.log(response)
+             
+            }) 
+        
+        .catch(function(error) {
+                console.log(error);
+            });
+
+
+       /*   fetch('http://localhost:5000/api')
+        
+        .then(response => response.json())
+        
+        
+        .then((data) => setInfo({Location:  data.name, temperature: Math.round((data.main.temp-273.15)*1.8+32)+"ºF", descr: data.weather[0].description, Icon: <img alt="" src={`https://openweathermap.org/img/w/${data.weather[0].icon}.png`} />, wind: "wind: "+ Math.round((data.wind.speed) * 2.236936) + " mph"}))
+        
+        .catch((error)=> alert("Incorrect City, Try Again!" + error))
+         */
+ 
 }
-        render(){
+        
             return(
                 <div className="home">
                     
@@ -45,7 +66,8 @@ class Home extends Component{
                         className="search-bar"
                         name="City"
                         placeholder='Search City...  '
-                        onChange = {(e)=>this.handleChange(e)}
+                        onChange = {handleChange}
+                        value= {info.City}
                     
                     />
 
@@ -54,7 +76,7 @@ class Home extends Component{
                         style={{backgroundColor: 'black'}} 
                         size = "small" 
                         variant='contained' 
-                        onClick={(e)=>this.handleSubmit(e)} 
+                        onClick={handleSubmit} 
                         >Submit
                     </Button>
 
@@ -62,19 +84,19 @@ class Home extends Component{
 
                         <div className='LocationBox'>
                             <div className='location'>
-                                {this.state.Location}
+                                {info.Location}
                             </div>
                         </div>
 
                         <div className='WeatherBox'>
                             <div className='temperature'>                                      
-                                    {this.state.temperature}
+                                    {info.temperature}
                             <div className= 'description'>
-                                    {this.state.descr}{this.state.Icon}
+                                    {info.descr}{info.Icon}
                             </div>
 
                             <div className= 'windspeed'>
-                                    {this.state.wind}
+                                    {info.wind}
                             </div>
                                 
                             </div>
@@ -84,7 +106,7 @@ class Home extends Component{
                 </div>
             )
 
-        }
+        
 }
 
 export default Home;

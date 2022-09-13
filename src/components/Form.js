@@ -1,50 +1,49 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import Button from '@mui/material/Button'
 import PublishIcon from '@mui/icons-material/Publish';
-import * as dotenv from 'dotenv'
+import axios from "axios"; 
 
-dotenv.config()
+function Form(){
+const [info, setInfo] = useState ({
+    City:"", 
+    Location: "", 
+    temperature: "", 
+    descr: "", 
+    wind: "", 
+    Icon: ""});
 
-class Form extends Component {
-    constructor(props) {
-        super(props)
-        
-        this.state = {City:"", Location: " ", temperature: " ", descr: " ", wind: " "};
 
 
-    }
-
-    handleChange = (e) => {
-        
-       // prevent page reloads form event
-       e.preventDefault(); 
-
-       // update the state everytime the form changes
-       this.setState({[e.target.name] : e.target.value})
-
-    }
-    onFormSubmit = (e)=>{
+    const handleChange=(e)=>{
 
         e.preventDefault();
+        setInfo({...info,[e.target.name]: e.target.value})
+    
+    }
+    
+  
 
-       fetch('https://api.openweathermap.org/data/2.5/weather?q=' + this.state.City + '&appid=' + process.env.REACT_APP_OPEN_WEATHER_API_KEY)
-        .then(response => response.json())
-        .then((City) => {
-        this.setState({Location: City.name, temperature: Math.round((City.main.temp-273.15)*1.8+32)+"ºF", descr: City.weather[0].description, wind: Math.round(City.wind.speed * 2.236936) + "mph"})
+    const handleSubmit = async (e)=>{
+
+        e.preventDefault();
+  
         
-        let newerLink = {City: this.state.City, temperature: this.state.temperature, descr: this.state.descr, wind: this.state.wind };
-        this.props.onNewSubmit(newerLink);
+      
+      await axios.post('http://localhost:5000/',info) //posting new data from client to apiserver
+    
+   
+        .then(function(response){
+                console.log(response)
+             
+            }) 
         
-       // calls the callback function from Favorites and sends data from state
-     })
-     .catch((error)=> {
-        alert("Incorrect City, Try Again!");
-    })
-        
+        .catch(function(error) {
+                console.log(error);
+            });
 
     }
 
-    render() {
+  
 
         return(
             <form>
@@ -53,8 +52,8 @@ class Form extends Component {
                   type = "text" 
                   name= "City"
                   placeholder='Favorite City...  '
-                  value = {this.state.City}
-                  onChange = {(e)=>this.handleChange(e)}
+                  value = {info.City}
+                  onChange = {handleChange}
                 />
                  
                 
@@ -64,7 +63,7 @@ class Form extends Component {
                  size = "small" 
                  type="submit" 
                  variant='contained' 
-                 onClick= {((e)=>this.onFormSubmit(e))}>Submit
+                 onClick= {handleSubmit}>Submit
                 </Button>
                 
            
@@ -74,6 +73,6 @@ class Form extends Component {
         )
         
     }
-}
+
 
 export default Form;
