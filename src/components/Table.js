@@ -23,20 +23,18 @@ const TableHeader = () => {
     const rows =  props.favData.map((row, index) => {
                    
         return(
+                      
             <tr key={index}>
-
-                         
-                <td>{row.City}</td>
-                <td> {row.temperature}</td>
-                <td>{row.descr}</td>
-                <td> {row.wind}</td>
-                <Button 
+                <td>{row.Location}</td>
+                <td> {row.Temperature}</td>
+                <td>{row.Description}</td>
+                <td> {row.Wind}</td>
+                <td><Button 
                     variant='contained' 
-                    style={{backgroundColor: 'rgb(16, 76, 102'}} 
+                    style={{backgroundColor:'rgb(16, 76, 102'}} 
                     onClick={() => props.removeLink(index)}>
                     <DeleteIcon fontSize='medium'/>
-                </Button>
-               
+                </Button></td>
             </tr>
         )
     })
